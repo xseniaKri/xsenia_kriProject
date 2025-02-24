@@ -1,0 +1,7 @@
+<h1>Список задач</h1>
+<u1>
+    {% for task in tasks %}
+        <li>{{ task.title }} - {{ task.status.name }} <a href="{% url 'task_edit' task.pl %}">Редактировать</a></li>
+    {% endfor %}
+</u1>
+<a href="{% url 'task_create' %}">Создать задачу</a>
