@@ -1,6 +1,17 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Task, Status
 from .forms import TaskForm
+from rest_framework import viewsets
+from .serializers import TaskSerializer, StatusSerializer
+
+class TaskViewSet(viewsets.ModelViewSet):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
+
+class StatusViewSet(viewsets.ModelViewSet):
+    queryset = Status.objects.all()
+    serializer_class = StatusSerializer
+
 
 def task_list(request):
     tasks = Task.objects.all()

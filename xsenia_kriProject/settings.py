@@ -26,7 +26,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-z&z@a%lbzpga!)%8-)iqhf*g=!b(=-q=sp!=4ayzq@^0e_&1w6'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', default=True, cast=lambda x: x == 'TRUE')
+DEBUG = True
+# config('DEBUG', default=True, cast=lambda x: x == 'TRUE')
 
 ALLOWED_HOSTS = []
 
@@ -39,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'rest_framework',
 
     'tasks',
     'users',
