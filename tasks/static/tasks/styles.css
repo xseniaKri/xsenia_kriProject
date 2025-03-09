@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'JB';
+    src: url('../fonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JB';
+    src: url('../fonts/JetBrainsMono-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JB';
+    src: url('../fonts/JetBrainsMono-Italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+body {
+    background-color: #E0D3F3;
+}
+
+h1 {
+    text-align: center;
+    color: #6F3AE8;
+    font-family: 'JB', sans-serif;
+    font-weight: bold;
+    font-size: 48px
+}
+
+a:link {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #6F3AE8;
+    font-family: 'JB', sans-serif;
+    font-style: italic;
+    font-size: 20px
+}
+
+a:hover {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: hotpink;
+}
+
+a:visited {
+   display: block;
+   text-decoration: none;
+   text-align: center;
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+}
+
+/* Стили для заголовков таблицы */
+th {
+    background-color: #6F3AE8;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Стили для строк */
+td {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Разные цвета для статусов */
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: 120px;
+    display: inline-block;
+}
+
+/* Красим статус "Готово" в зеленый */
+.status-done {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Красим статус "В процессе" в оранжевый */
+.status-in-progress {
+    background-color: #FFA500;
+    color: white;
+}
+
+form {
+    font-family: 'JB', sans-serif; /* Установить шрифт для всей формы */
+    font-size: 18px; /* Размер шрифта */
+    color: #6F3AE8; /* Цвет текста */
+    background-color: #E0D3F3; /* Фон формы */
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px; /* Ширина формы */
+    margin: 0 auto; /* Центрирование */
+}
+
+input, textarea, select {
+    font-family: 'JB', sans-serif; /* Шрифт */
+    font-size: 16px; /* Размер шрифта */
+    width: 100%; /* Растянуть на всю ширину */
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #6F3AE8;
+    border-radius: 4px;
+}
+
+button {
+    font-family: 'JB', sans-serif;
+    font-size: 18px;
+    background-color: #6F3AE8;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hotpink;
+}

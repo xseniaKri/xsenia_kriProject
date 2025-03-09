@@ -9,6 +9,8 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+import os
+import sys
 from email.policy import default
 from pathlib import Path
 from tracemalloc import Statistic
@@ -18,6 +20,7 @@ from django.conf.global_settings import STATIC_URL
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+sys.path.append(os.path.join(os.path.dirname(__file__), 'venv/lib/python3.12/site-packages'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/

@@ -1,6 +1,7 @@
 from django.db import models
 from users.models import Profile
 
+
 class Status(models.Model):
     name = models.CharField(max_length=50, unique=True)
 

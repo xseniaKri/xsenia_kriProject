@@ -1,6 +1,29 @@
-<h1>Создать/редактировать задачу</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Сохранить</button>
-</form>
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'tasks/styles.css' %}">
+        <title>Задача</title>
+    </head>
+    <body>
+        <h1>Создать/редактировать задачу</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Сохранить</button>
+        </form>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <!-- Подключаем JS -->
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                flatpickr("#id_due_date", {
+                    enableTime: true,
+                    dateFormat: "Y-m-d H:i",
+                    time_24hr: true
+                });
+            });
+        </script>
+
+    </body>
